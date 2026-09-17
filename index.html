@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0812" />
+  <meta
+    name="description"
+    content="Dua Kerajaan, Satu Takdir — kisah Sang Pangeran dan Sang Putri tentang pertemuan, jarak, kehilangan, dan jalan pulang."
+  />
+  <title>Dua Kerajaan, Satu Takdir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Buka menu" type="button">
+    <span></span><span></span><span></span>
+  </button>
+
+  <aside class="side-nav" id="sideNav">
+    <a class="nav-brand" href="#gerbang">
+      <span class="crest">♛</span>
+      <span class="brand-copy">
+        <strong>DUA KERAJAAN</strong>
+        <small>SATU TAKDIR</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="#prolog" data-section="prolog"><span>00</span> Prolog</a>
+      <a href="#perguruan" data-section="perguruan"><span>01</span> Perguruan</a>
+      <a href="#padepokan" data-section="padepokan"><span>02</span> Padepokan</a>
+      <a href="#jamuan" data-section="jamuan"><span>03</span> Jamuan</a>
+      <a href="#teater" data-section="teater"><span>04</span> Teater</a>
+      <a href="#wisuda" data-section="wisuda"><span>05</span> Mawar</a>
+      <a href="#ikrar" data-section="ikrar"><span>06</span> Ikrar</a>
+      <a href="#jeda" data-section="jeda"><span>07</span> Jeda</a>
+      <a href="#epilog" data-section="epilog"><span>08</span> Epilog</a>
+    </nav>
+
+    <div class="side-bottom">
+      <button class="music-control" id="musicControl" type="button" aria-label="Putar musik">
+        <span class="music-icon" id="musicIcon">♫</span>
+        <span>
+          <strong id="musicState">Putar Musik</strong>
+          <small>Lentera & Mahkota</small>
+        </span>
+      </button>
+      <p>Tekan <kbd>M</kbd> untuk musik</p>
+    </div>
+  </aside>
+
+  <main class="page-shell">
+    <header class="hero" id="gerbang">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-moon" aria-hidden="true"></div>
+      <div class="hero-mist mist-one" aria-hidden="true"></div>
+      <div class="hero-mist mist-two" aria-hidden="true"></div>
+
+      <div class="hero-copy reveal">
+        <p class="overline">SEBUAH KISAH TENTANG JALAN PULANG</p>
+        <h1>
+          <span>Dua Kerajaan,</span>
+          <em>Satu Takdir</em>
+        </h1>
+        <p class="hero-intro">
+          Kisah Sang Pangeran dan Sang Putri tentang pertemuan, jarak, kehilangan,
+          keberanian untuk kembali, dan sebuah lembaran yang belum selesai ditulis.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#prolog">Buka Lembaran Pertama</a>
+          <button class="ghost-button" id="heroMusicButton" type="button">♫ Musik Cerita</button>
+        </div>
+      </div>
+
+      <div class="castle-scene" aria-hidden="true">
+        <svg viewBox="0 0 1600 620" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="mountainGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#262038" />
+              <stop offset="100%" stop-color="#0c0912" />
+            </linearGradient>
+            <linearGradient id="castleGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#20172a" />
+              <stop offset="100%" stop-color="#08060c" />
+            </linearGradient>
+          </defs>
+
+          <path fill="url(#mountainGradient)" opacity=".8"
+            d="M0 470L140 342l86 74 120-153 119 128 103-96 113 106 145-196 136 190 109-115 129 128 103-76 157 138v150H0z"/>
+          <path fill="#100c18" opacity=".92"
+            d="M0 510L130 410l101 70 110-122 124 109 130-153 151 167 154-234 159 225 107-104 142 126 132-94 180 110v110H0z"/>
+
+          <path fill="url(#castleGradient)" d="
+            M300 620V480h90v-72h36v-98h50v98h38v72h72V364h42v-70h31v-50h20v50h33v70h42v116h84V352h38v-83h54v83h40v128h86v-86h42v-67h28v-43h20v43h31v67h43v86h102v140z
+          "/>
+
+          <g fill="#d8ad55" opacity=".75">
+            <rect x="452" y="347" width="12" height="28" rx="6"/>
+            <rect x="667" y="326" width="12" height="28" rx="6"/>
+            <rect x="912" y="307" width="12" height="28" rx="6"/>
+            <rect x="1155" y="365" width="12" height="28" rx="6"/>
+          </g>
+
+          <path d="M695 620v-88c0-42 27-68 60-68s60 26 60 68v88z" fill="#050409"/>
+          <path d="M750 465v-44" stroke="#d8ad55" opacity=".25"/>
+        </svg>
+      </div>
+
+      <div class="scroll-cue">
+        <span>Gulir memasuki kisah</span>
+        <i></i>
+      </div>
+    </header>
+
+    <section class="story-section light" id="prolog">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">PROLOG</span>
+          <h2>Dua Wilayah, Dua Nama</h2>
+          <div class="chapter-ornament"><span></span><i>✦</i><span></span></div>
+        </div>
+
+        <article class="story-body reveal">
+          <p class="lead">
+            <span class="dropcap">K</span>onon, pada suatu masa ketika benteng-benteng kerajaan masih berdiri megah di antara hijau perbukitan dan lautan luas, berdirilah dua wilayah bangsawan yang sejak lama saling terhubung oleh tali silaturahmi. Di negeri itu, nama dua anak manusia telah saling berbisik dalam ingatan jauh sebelum mereka memahami arti dari sebuah rasa.
+          </p>
+
+          <p>
+            Sang Pangeran tidak tumbuh sebagai sosok yang asing bagi Sang Putri. Ayahanda Sang Putri kerap kali mengendarai kereta kerajaan untuk mengantar Sang Pangeran muda menjelajahi jalan-jalan setapak antarwilayah. Kehadiran Sang Pangeran adalah pemandangan yang lazim dalam derap langkah keseharian Sang Putri.
+          </p>
+
+          <blockquote>
+            “Yang manakah gerangan Sang Putri itu?”
+          </blockquote>
+
+          <p>
+            Dari perbincangan para kerabat di lorong-lorong istana, nama Sang Putri pun kerap terdengar hingga Sang Pangeran muda pernah melayangkan tanya polos di antara embun pagi. Takdir tidak pernah menyapa dengan genderang perang; ia sering kali mengetuk gerbang secara perlahan melalui dua keluarga yang saling mengenal.
+          </p>
+        </article>
+
+        <div class="memory-card reveal">
+          <span>✧</span>
+          <p>Jauh sebelum mereka memahami arti sebuah rasa, nama mereka telah lebih dahulu saling mengenal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section night" id="perguruan">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB I</span>
+          <h2>Perguruan Cendekia Istana</h2>
+          <div class="chapter-ornament"><span></span><i>♜</i><span></span></div>
+        </div>
+
+        <div class="story-layout">
+          <div class="visual-card reveal">
+            <div class="visual-number">01</div>
+            <div class="visual-symbol">❦</div>
+            <p>Masa ketika kedekatan tumbuh tanpa perlu diberi nama.</p>
+          </div>
+
+          <article class="story-body reveal">
+            <p class="lead">
+              <span class="dropcap">T</span>ahun-tahun bergulir hingga masa remaja menyapa. Di Perguruan Cendekia Istana, secara tak terduga, Sang Pangeran dan Sang Putri ditempatkan dalam satu ruang tempaan ilmu yang sama, bahkan nama mereka tertulis berdampingan pada gulungan perkamen pustaka.
+            </p>
+
+            <p>
+              Para sahabat muda di balairung perguruan tak henti-hentinya bersenda gurau, menyandingkan nama mereka berdua. Sang Pangeran dan Sang Putri hanya tersenyum tipis, membiarkan kehangatan itu mengalir tanpa status yang mengikat. Ketika Sang Putri bergabung dengan komunitas pelestari seni istana, latihan kerap dilangsungkan di pelataran kediaman Sang Pangeran.
+            </p>
+
+            <p>
+              Di sanalah benih-benih kejelian Sang Putri tumbuh. Dengan sengaja, Sang Putri kerap meninggalkan bejana air minum dari ukiran perak atau barang kecil milik pribadi di kediaman tersebut. Semua itu dilakukannya hanya agar memiliki alasan yang sah untuk kembali menunggang kuda menyeberangi jembatan istana dan berhadapan wajah dengan Sang Pangeran.
+            </p>
+
+            <p>
+              Namun, usia mereka masih terlalu muda. Tidak ada sumpah ikrar, tidak ada penyerahan lambang cinta. Mereka rapat, lalu perlahan memudar bagai kabut pagi, sempat saling menyapa kembali di penghujung masa perguruan, lalu kembali meniti jalan masing-masing dalam keraguan.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinematic-break">
+      <div class="break-copy reveal">
+        <span>❦</span>
+        <p>“Jarak kadang bukan akhir. Ia hanya menguji seberapa lama sebuah nama mampu bertahan di dalam hati.”</p>
+      </div>
+    </section>
+
+    <section class="story-section parchment" id="padepokan">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB II</span>
+          <h2>Tembok Padepokan & Jarak</h2>
+          <div class="chapter-ornament"><span></span><i>⚔</i><span></span></div>
+        </div>
+
+        <article class="story-body wide reveal">
+          <p class="lead">
+            <span class="dropcap">K</span>etika melangkah menuju jenjang kematangan berikutnya, Sang Pangeran harus meninggalkan kediamannya untuk menuntut ilmu seni perang dan kitab suci di sebuah padepokan terpencil yang dibentengi tembok-tembok tinggi.
+          </p>
+
+          <p>
+            Sang Putri, yang kala itu diliputi jiwa muda yang tak tahan akan kesunyian jarak, berjuang melintasi hari-hari tanpa kepastian. Meski demikian, setiap kali rembulan terbit sehabis ibadah malam, Sang Pangeran selalu menyempatkan diri mengirimkan burung pembawa pesan atau utusan rahasia. Suara dan kabar dari padepokan seolah menjadi lentera penerang di kamar Sang Putri.
+          </p>
+
+          <p>
+            Bahkan ketika keluarga Sang Pangeran pergi berkunjung ke padepokan, Sang Putri kerap ikut serta membawa bekal makanan dan perlengkapan. Tak jarang pula, Sang Putri seorang diri nekat memacu kudanya menembus jarak setengah jam perjalanan menembus bukit hanya demi menitipkan sebuah bungkusan di gerbang padepokan.
+          </p>
+
+          <p>
+            Namun, ketahanan hati manusia ada batasnya. Jarak yang membentang bak samudra akhirnya merobohkan jembatan komunikasi mereka. Utusan tak lagi dikirim, burung pembawa pesan tak lagi terbang. Hanya sekali Sang Putri mengirimkan utusan darurat untuk meminta bantuan keping emas bayaran perguruan, setelahnya—sunyi menelan segalanya.
+          </p>
+
+          <p>
+            Di balik tembok padepokan, Sang Pangeran memutuskan untuk mengunci rapat benteng hatinya. Ia tak lagi memandang bangsawati mana pun dengan binar kehangatan. Luka yang ditinggalkan oleh perpisahan itu diredamnya di antara derap latihan dan perbincangan bersama para kesatria sahabatnya.
+          </p>
+
+          <p>
+            Meski para kesatria kerap membawa kabar bahwa Sang Putri telah menyandingkan hatinya pada kesatria dari negeri lain, Sang Pangeran berpura-pura tenang, walau setiap kabar burung itu bagaikan sembilu yang menyayat perban lukanya yang belum sepenuhnya pulih.
+          </p>
+        </article>
+
+        <div class="timeline reveal" aria-label="Empat musim">
+          <div><span>Musim I</span></div>
+          <div><span>Musim II</span></div>
+          <div><span>Musim III</span></div>
+          <div><span>Musim IV</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section night" id="jamuan">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB III</span>
+          <h2>Empat Musim & Sebuah Undangan</h2>
+          <div class="chapter-ornament"><span></span><i>✉</i><span></span></div>
+        </div>
+
+        <article class="story-body wide reveal">
+          <p class="lead">
+            <span class="dropcap">E</span>mpat musim berganti hingga empat tahun berlalu. Kabar di antara mereka telah lama terkubur rapat di bawah dedaunan gugur. Hingga pada suatu Musim Suci Penyesalan, ketika lampu-lampu lentera digantung di sepanjang alun-alun kerajaan, sebuah gulungan perkamen tiba di kediaman Sang Putri.
+          </p>
+
+          <p>
+            Itu adalah utusan dari Sang Pangeran yang mengundangnya dalam perayaan jamuan berbuka di balairung. Untuk mencairkan kekakuan yang menumpuk sekian lama, Sang Putri mengajak serta para sahabat lama dari masa perguruan.
+          </p>
+
+          <p>
+            Pada malam jamuan tersebut, ketika mereka duduk di bawah naungan atap kayu ukir yang sama, Sang Putri menyadari bahwa perasaan yang terendam sekian lama tidak pernah benar-benar padam—ia hanya tertimbun debu waktu. Sang Pangeran, yang semula meyakini hatinya telah sepenuhnya membeku, telah mempersiapkan diri sedemikian rupa: merapikan jubah kerajaannya yang baru dan memotong rambutnya dengan rapi sebelum melangkah ke jamuan.
+          </p>
+
+          <blockquote class="large-quote">
+            Saat tatapan mereka bertemu, seluruh kenangan masa lalu berhamburan bagai daun-daun kering ditiup angin malam.
+          </blockquote>
+
+          <p>
+            Malam itu, di antara keramaian jamuan, perselisihan batin membuat mereka lebih banyak terdiam.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section light" id="teater">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB IV</span>
+          <h2>Gedung Teater & Jemari yang Bertemu</h2>
+          <div class="chapter-ornament"><span></span><i>◈</i><span></span></div>
+        </div>
+
+        <article class="story-body reveal">
+          <p class="lead">
+            <span class="dropcap">B</span>eberapa hari kemudian, sebuah undangan terkirim untuk menyaksikan pertunjukan teater di gedung seni kerajaan. Sang Pangeran menyambut undangan tersebut.
+          </p>
+
+          <p>
+            Pertemuan demi pertemuan mulai kembali terjalin. Dari menyaksikan pertunjukan berkisah tentang bayangan gaib bersama rombongan kesatria, hingga akhirnya tersisa pergelaran drama di mana mereka hanya duduk berdua di bawah remang lentera gedung teater.
+          </p>
+
+          <p>
+            Nyaman itu kembali memeluk, namun benteng gengsi membuat keduanya memilih untuk menutup mata dari kenyataan. Pada suatu malam pertunjukan drama horor, Sang Putri memberikan sebuah tantangan keberanian: jika Sang Pangeran mampu membuatnya menyaksikan seluruh pertunjukan tanpa memalingkan wajah, sebuah hidangan manis di pasar kerajaan akan menjadi ganjarannya.
+          </p>
+
+          <div class="hand-scene">
+            <span class="left-hand">☜</span>
+            <i></i>
+            <span class="right-hand">☞</span>
+          </div>
+
+          <p>
+            Untuk menjaga agar Sang Putri tidak memalingkan pandangan, Sang Pangeran menggenggam jemari Sang Putri sepanjang pertunjukan. Malam itu, ketenangan Sang Putri runtuh oleh getaran yang tak tertahankan di dalam dadanya.
+          </p>
+
+          <p>
+            Namun jalur cinta tak pernah lurus; pada pertunjukan drama berikutnya yang mengisahkan legenda dua sejoli, ketika Sang Pangeran hendak kembali meraih jemari itu, Sang Putri yang disergap rasa gugup justru menarik tangannya.
+          </p>
+
+          <blockquote>
+            “Rupanya ia hanya menganggapku sebagai seorang sahabat seperjuangan.”
+          </blockquote>
+
+          <p>
+            Dua manusia itu kembali saling menjauh di balik benteng pertahanan hati masing-masing.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section rose" id="wisuda">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB V</span>
+          <h2>Mawar di Hari Pengukuhan</h2>
+          <div class="chapter-ornament"><span></span><i>✿</i><span></span></div>
+        </div>
+
+        <div class="rose-layout">
+          <div class="rose-emblem reveal" aria-hidden="true">
+            <div class="rose">❀</div>
+            <span>MAWAR PERTAMA</span>
+          </div>
+
+          <article class="story-body reveal">
+            <p class="lead">
+              <span class="dropcap">N</span>amun jarak itu tak bertahan lama. Ketika hari wisuda kelulusan Sang Putri dari Akademi Cendekia Istana tiba, Sang Pangeran melangkah hadir membawa seikat bunga mawar segar—bunga pertama yang pernah diterima Sang Putri secara langsung dari tangannya. Bunga itu adalah pesan tersirat bahwa api di hatinya belum padam.
+            </p>
+
+            <p>
+              Seusai prosesi pengukuhan, saat ramah tamah digelar di aula besar, kedua orang tua Sang Putri berhalangan hadir karena suatu tugas kerajaan. Kerabat perempuan Sang Putri yang melihat Sang Pangeran berdiri di sudut ruangan menyeru:
+            </p>
+
+            <blockquote>
+              “Pangeran, mengapa engkau berdiri di sana? Majulah dan dampingilah Sang Putri!”
+            </blockquote>
+
+            <p>
+              Tanpa ragu, Sang Pangeran melangkah maju dengan gagah. Busana kerajaan yang mereka kenakan hari itu secara tak sengaja memiliki warna dan sulaman emas yang sangat senada. Hari itu, aula akademi menjadi saksi sebuah takdir yang seolah dirancang oleh alam.
+            </p>
+
+            <p>
+              Sejak hari anggun di akademi tersebut, hubungan mereka melaju pesat tanpa ikrar resmi. Mereka saling bertukar pesan di kala fajar dan senja, berjalan bersama menyusuri taman istana, menggambar wajah pada perca lukisan cepat, dan saling menggenggam tangan. Perbuatan mereka adalah sepasang kekasih, namun bibir mereka belum mengucap janji.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="vow-scene" id="ikrar">
+      <div class="fireworks" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="vow-inner reveal">
+        <p class="chapter-index">BAB VI · MALAM PERGANTIAN TAHUN</p>
+        <h2>Ikrar di Bawah Satu Panji</h2>
+
+        <p class="vow-text">
+          Hingga pada malam pergantian tahun, di bawah langit malam yang dihiasi kembang api dan obor-obor kerajaan, Sang Putri memberanikan diri berbisik di antara desir angin:
+        </p>
+
+        <blockquote>
+          “Belum ada janji terucap di antara kita, bukan?”
+        </blockquote>
+
+        <p class="vow-text">
+          Sang Pangeran tersenyum lembut. Di bawah naungan bintang-bintang, ia menatap dalam manik mata Sang Putri dan mengutarakan kalimat ikrar yang meruntuhkan segala keraguan:
+        </p>
+
+        <div class="vow-box">
+          <span>♛</span>
+          <p>“Maukah engkau menjadi sang dewi dalam hidupku dan berjalan bersamaku di bawah satu panji?”</p>
+        </div>
+
+        <p class="vow-text">
+          Sejak malam ikrar itu, Sang Putri baru menyadari bahwa di balik ketegasan Sang Pangeran, tersimpan kehangatan dan kelembutan yang tiada tara. Bahkan, jauh sebelum hari itu, dalam perbincangan rahasia para tetua dan bangsawan tinggi kerajaan, nama mereka berdua sudah sering disandingkan dalam doa dan harapan di balik tembok balairung.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-section parchment" id="jeda">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">BAB VII</span>
+          <h2>Negeri Timur & Panji yang Diturunkan Sejenak</h2>
+          <div class="chapter-ornament"><span></span><i>☾</i><span></span></div>
+        </div>
+
+        <article class="story-body wide reveal">
+          <p class="lead">
+            <span class="dropcap">N</span>amun, takdir selalu menguji kokohnya sebuah benteng. Suatu hari, tugas kerajaan mengharuskan Sang Putri berangkat menuju wilayah perbatasan di negeri seberang, sebuah tanah jauh di sebelah timur.
+          </p>
+
+          <p>
+            Hubungan mereka kembali diuji oleh burung pembawa pesan, kertas perkamen, dan kerinduan yang membakar dada. Tekanan jarak dan perbedaan pandangan membuat pertengkaran kecil kerap timbul di balik surat-surat yang dikirim. Dalam situasi yang kian menghimpit, mereka memutuskan untuk mengambil jeda—menurunkan panji sejenak, menarik napas, dan merenungkan arah perjalanan.
+          </p>
+
+          <div class="pause-panel">
+            <span>JEDA</span>
+            <p>
+              Jeda ini bukanlah pengkhianatan atau akhir dari kasih. Ini hanyalah saat bagi mereka untuk menempa pedang kedewasaan, merapikan luka di dada, dan belajar menjadi pribadi yang lebih bijaksana.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section night epilog" id="epilog">
+      <div class="section-inner">
+        <div class="chapter-head reveal">
+          <span class="chapter-index">EPILOG</span>
+          <h2>Lembaran yang Tertunda</h2>
+          <div class="chapter-ornament"><span></span><i>✦</i><span></span></div>
+        </div>
+
+        <article class="story-body wide reveal">
+          <p class="lead">
+            <span class="dropcap">O</span>rang-orang tua di alun-alun kerajaan masih sering menceritakan kisah ini. Ini bukanlah dongeng yang selesai dengan pesta di istana dan mahkota yang disandingkan. Kisah Sang Pangeran dan Sang Putri masih terus ditulis oleh waktu.
+          </p>
+
+          <p>
+            Mereka adalah dua manusia yang berkali-kali kehilangan jejak di tengah kabut, namun berkali-kali pula menemukan jalan kembali ke gerbang yang sama. Dari dua anak yang hanya saling tahu nama, teman satu perguruan, jemari yang saling menggenggam di gedung teater, seikat mawar wisuda, ikrar di bawah malam pergantian tahun, hingga jeda di perbatasan negeri.
+          </p>
+
+          <blockquote class="large-quote">
+            Sang Putri menyakini di dalam hatinya: apabila takdir telah mengukir nama mereka pada batu prasasti yang sama, suatu hari nanti angin akan membawa mereka kembali berhadapan.
+          </blockquote>
+
+          <p>
+            Bukan lagi sebagai dua pemuda yang ragu, melainkan sebagai dua insan dewasa yang siap menjaga sumpah yang telah dipertemukan kembali oleh Sang Pencipta.
+          </p>
+
+          <p>
+            Sebab hingga saat ini, kisah di antara dua kerajaan itu belum benar-benar usai. Ia hanyalah sebuah lembaran yang tertunda, menunggu fajar berikutnya menyingsing.
+          </p>
+        </article>
+
+        <div class="finale-card reveal">
+          <div class="finale-crown">♛</div>
+          <p>BUKAN TAMAT</p>
+          <h3>Hanya jeda sebelum fajar berikutnya.</h3>
+          <a href="#gerbang">Kembali ke halaman pertama ↑</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span class="footer-symbol">♛</span>
+      <strong>DUA KERAJAAN, SATU TAKDIR</strong>
+      <p>Kisah Sang Pangeran & Sang Putri</p>
+    </footer>
+  </main>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="assets/audio/golden brown vibes.mp3" type="audio/mpeg" />
+</audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
